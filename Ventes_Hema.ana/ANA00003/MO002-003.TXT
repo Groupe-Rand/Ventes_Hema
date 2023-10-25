@@ -1,0 +1,9 @@
+//MO002-003.TXT ANA00002 TO ANA00003
+Magasins		TAR	730	nouvelle taille enregistrement : 730
+Magasins	Mag_Ferme	RUB+		Mag_Ferme est une nouvelle rubrique
+Magasins	Secteur	RUB+		Secteur est une nouvelle rubrique
+Magasins	Pays	RUB+		Pays est une nouvelle rubrique
+Magasins	Zone_Geo	RUB+		Zone_Geo est une nouvelle rubrique
+Reférence_Hema		TAR	334	nouvelle taille enregistrement : 334
+Reférence_Hema	Rayon	RUB+		Rayon est une nouvelle rubrique
+Reférence_Hema	Ref_Hema_Number	RUB+		Ref_Hema_Number est une nouvelle rubrique

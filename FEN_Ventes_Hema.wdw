@@ -1,0 +1,412 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Ventes_Hema
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Ventes_Hema
+ identifier : 0x2c76608107de4ab4
+ internal_properties : CAAAAAgAAADaSnAl7LRqf0Vx06XzvZoSNv3PEDlQfLWf10657QdJjvcQgAfBf+kxJBkDXOH+UAKJKdkWHztS3A0zjE4t3b8VSwpA/LVJrRaofy83DhfP6A7Vuz9lHjsbyDDq1ooIM+KnWlAsXmtCexfFuGVqWCJ37IoAWCSI5THtUnY4+RVZ4Cgmv9XmH1xAaoCXpoyi7RmbMNv5KQOEumqAUM4ZseVzGTo1P7w0S+Yn7UXf8hTUtc3Mbq7edOVLgr2jGj9em6quVymn3amfuJCKTHeaRJpzIwUBfNMlJl619OcAYyCKta/JXBg0SHGYyWu8lvwN9NPMUe9hMD7LWNA8YaMQzkmfiNebKDtpNc3QsdKQbPUtSPoqpz3vUxpov9B/69Kqi4gtoHvtAFzPf2IKDjFjZ7A9sPRsXnSvEYUNgdiZkkGtUhJqnwqssPl8+F4Mj9PpCzR+dute8x8KalVGsWyugRM8QpEK+VYEZoYxlF55AIsBVKzWT1T1pyNAunpTi6a2vV9S4MlxLc2c/77hrLpHjweMziJFb1Z4TFNMnP/yI3gs4UUtiJ+lDw2b5kxMbtMmxAtPNQtuKwhGYAkmhcgAZnk9vknor2rreL0Gx101utmdjvH5j6mVp/ohOntghkQqZP7H19PhYwH1BdYrdBxfNVilzELxCLZQ7ZO2GRQwWl1rV3VfyguQ+n5LMHFMNlv3RD0WLHO1BWjBiNqhscWeT2/eODaXZqSU367xIMEjIqs9LCaJttWMRjA1vBMCPN8d728ezfi7aqq2an/ngRAYe3UzusPitjfzxGmp3qWlGlY/rCldYG0sQSIpUW57eLACSfxcsCiy6JpzKrrCKl38fORVrb5SjNVo467rLsWZpDdygmOTAoJ8JqE=
+ properties :
+  width : 387
+  height : 150
+  widthClient : 385
+  heightClient : 118
+ controls : []
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : CAAAAAgAAADAfZ27Q+jJ/MBXHLGCb7PyE2Yqjvuo9mAX2ZN+LLuyQtzms1431znXR0sNCCeLESXZp1gqmo+m2mUhb2ELR2phZ8VOgUSyXddfQyxpxffipvH/iiFuFkCLgpjx1Ah9/9/ndeRpWb0s9Qcjy8oPtW3aMcRtuglgDe5Ch9/jnC/Drp19/hhf+qz96diLw5T0yWlzg33c/E8hhMwUBdSOV69/8iDQGLfTvLoTvV3YkiQ5Dce7dxB2gUx1AVvVTykQMm7G+0haIOV568KMGgPEJluRN2XjgQ11Tb8vVxt6P2g=
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAAAjFWXItEk/EPvcbGR+hALkgRfdOpVtIn+yZNxHnmSRFJegE/AnD2HbGAaMfhGCqfzkryHG9FVhjtF+iQYkZ59QBQ88Okhh0vjCoVhOagox2hvIqrJnU30QK15/ZA==
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      PROCEDURE MaFenêtre()
+      TableauFichier est un tableau <agrandissement=N> de chaine
+      nIndice est un entier = 1 
+      RepFichier est une chaine = "\\rand-edi2\DEX-INATOR_partage\Hema\"
+      sDate est une chaine = Remplace(DateVersChaîne(DateSys()),"/","")
+      FichierLog est une chaîne =  "\\rand-edi2\DEX-INATOR_LOG\"+sDate+"  "+Gauche(HeureSys(),2)+Milieu(HeureSys(),3,2)+"Ventes_Hema.txt"
+      Separateur est une chaîne
+      FormatFichier est une chaine
+   -
+     code : |1+
+      Traitement()
+      
+     type : 34
+   -
+     code : |1+
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+     type : 165
+   -
+     code : |1+
+      
+      
+     type : 177
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1+
+      
+      
+     type : 2
+  procedures :
+   -
+     name : Traitement
+     procedure_id : 2050932886266487182
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // Traitement ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE Traitement()
+      ResCopie est un entier 
+      ResCree est un entier
+      IDFichier est un entier
+      IDLog est un entier
+      nTableUVC est un entier
+      nLigne est un entier = 1
+      LigneLue est une chaine
+      //CHANGER LA CHAINE PAR LE VRAI CHEMIN DU DOSSIER
+      DossierDestination est une chaine = "\\rand-edi2\DEX-INATOR_partage\Hema\Archives\"
+      sContenueLigne est une chaine
+      ResListeFichier est une chaine
+      sLogin est une chaine 
+      Motpasse est une chaine 
+      sAdresseFTP est une chaine 
+      bufSContenueFichier est un buffer
+      
+      Req_del est une source de données
+      
+      bPasdeFichier est un booléen = Faux
+      
+      //Création du fichier Log
+      ResCree = fCrée(FichierLog)
+      SI ResCree = - 1 ALORS
+      	Erreur(ErreurInfo())
+      SINON 
+      	IDLog = fOuvre(FichierLog,foLectureEcriture)
+      FIN
+      SI HExécuteRequêteSQL(Req_del,"DELETE FROM Integration_tmp") = Vrai ALORS
+      	fEcritLigne(IDLog,"La base temporaire est clean ")
+      FIN
+      
+      
+      //Recherche dans la base SQL les information sur la central 
+      HLitRecherchePremier(Processus,Process_Name,"Hema")
+      
+      SI HTrouve() ALORS
+      	
+      	sLogin = SansEspace(Processus.Login)
+      	Motpasse = SansEspace(Processus.Mot_de_passe)
+      	FormatFichier = SansEspace(Processus.Format_Fichier)
+      	Processus.Log_Fichier = FichierLog
+      	HModifie(Processus)
+      	Separateur = SansEspace(Processus.Separateur)
+      	//Fonction pour une recuperation Mail
+      	RecupBoiteMail(sLogin,Motpasse)
+      	
+      FIN
+      
+      //Parcour du répertoire EDI pour lister les fichiers
+      ResListeFichier = fListeFichier( RepFichier+"*.csv",frNonRécursif + frInterruptible)
+      SI ResListeFichier = "" ALORS
+      	fEcritLigne(IDLog,"Pas de fichier dans le repertoire "+RepFichier)
+      	bPasdeFichier = Vrai
+      SINON
+      	
+      	//Lecture des fichiers et ajout dans le base temporaires les ventes récupérés
+      	POUR TOUTE CHAÎNE sFichier DE ResListeFichier SEPAREE PAR RC
+      		
+      		ResCopie = fCopieFichier(sFichier,DossierDestination)
+      		fEcritLigne(IDLog,"Copie du fichier  "+fExtraitChemin(sFichier,fFichier)+ " sur "+DossierDestination)
+      		IDFichier = fOuvre(sFichier,foLectureEcriture)
+      		SI IDFichier = -1 ALORS
+      			fEcritLigne(IDLog," Impossible de lire le fichier   "+ fExtraitChemin(sFichier,fFichier)+ "  "+ErreurInfo(errMessage)) 
+      		SINON 
+      			fEcritLigne(IDLog,"Lecture du Fichier "+fExtraitChemin(sFichier,fFichier)+" en cours ....")
+      				
+      				sContenueFichierTMP est une chaine = ""
+      				bufSContenueFichier =  fLitLigne(IDFichier)
+      				LigneLue = UnicodeVersAnsi(bufSContenueFichier)
+      				fFerme(IDFichier)	
+      			
+      				nLigne = 1
+      				
+      				//nResCree est un entier = fCrée("\\rand-edi2\DEX-INATOR_partage\Hema\test.csv")
+      				
+      				POUR TOUT CHAINE sLigneContenue DE LigneLue SEPAREE PAR RC
+      					
+      //					SI nLigne > 1 ALORS
+      //						ExtractionLigne(sLigneContenue)
+      //					FIN
+      //					nLigne++
+      //					
+      						
+      						sContenueFichierTMP = sContenueFichierTMP +  sLigneContenue+ RC
+      						//fEcritLigne(nResCree,sLigneContenue)	
+      					
+      				FIN
+      				
+      //				
+      		fSauveTexte(sFichier,sContenueFichierTMP)
+      		
+      		sNomFichier est une chaine = fExtraitChemin(sFichier,fFichier)
+      		
+      		Traitement_Bulk(sNomFichier)
+      		
+      			
+      		fFerme(IDFichier)
+      		fEcritLigne(IDLog,"Fin de lecture du Fichier  "+ fExtraitChemin(sFichier,fFichier))	
+      		//SUPPRIMER LES // POUR LES 2 LIGNE CI DESOUS POUR LA PRODUCTION DU PROGRAMME 
+      		fSupprime(sFichier)
+      		LanceAppli("\\rand-edi2\DEX-INATOR_partage\Genera-innator\Genera-innator.exe",exeActif,exeBloquant)
+      		Temporisation(100,tempoTimer)
+      		FIN
+      	FIN
+      	
+      FIN
+      
+      
+      
+      fFerme(IDLog)
+      
+      Ferme(FEN_Ventes_Hema)
+      
+     type : 458752
+   -
+     name : RecupBoiteMail
+     procedure_id : 2050933397367648917
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //RecupBoiteMail (<Login>, <Motpasse>)
+      //
+      // Paramètres :
+      //	Login : <indiquez ici le rôle de Login>
+      //	Motpasse : <indiquez ici le rôle de Motdepasse>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE RecupBoiteMail(Login,Motpasse)
+      
+      sNomuser est une chaine
+      sDatejour est une chaine =  DateSys()
+      
+      SessionImap est une emailSessionIMAP
+      SessionImap..AdresseServeur = "imap.gmail.com"
+      SessionImap..Nom = Login
+      SessionImap..MotDePasse = Motpasse
+      SessionImap..Port = 993
+      SessionImap..Option = optionSSL
+      
+      EmailOuvreSession(SessionImap)
+      EmailLitDernier(SessionImap)
+      
+      
+      TANTQUE Email.EnDehors = Faux 
+      	
+      	SI Contient(Email.Expéditeur, "@hema.com")  ALORS
+      		
+      		Si Contient(Email.Attache[1], ".CSV") ALORS
+      			
+      			Si Contient(Email.Attache[1], "D") ALORS
+      				EmailSauveFichierAttaché(Email.Attache[1],RepFichier+"Ventes_Hema"+sDatejour+nIndice+".csv")	
+      				EmailSupprimeMessage(SessionImap)
+      				nIndice++
+      			SINON 
+      				EmailSauveFichierAttaché(Email.Attache[1],RepFichier+"Hebdo_Hema"+sDatejour+nIndice+".csv")	
+      				EmailSupprimeMessage(SessionImap)
+      				nIndice++
+      				
+      			FIN
+      
+      		FIN
+      
+      	FIN
+      	
+      	EmailLitPrécédent(SessionImap)
+      	
+      FIN
+      
+     type : 458752
+   -
+     name : ExtractionLigne
+     procedure_id : 2050933521921795131
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //ExtractionLigne (<ContenueLigne>)
+      //
+      // Paramètres :
+      //	ContenueLigne : <indiquez ici le rôle de Contenue>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      // 	sFichier : <indiquez ici le rôle de sFichier>
+      PROCEDURE ExtractionLigne(ContenueLigne)
+      
+      //Supprimer les variables qui ne servent pas
+      
+      sDateVente est une chaine 
+      sCodeMag est une chaîne
+      sNomMag est une chaine
+      sClef est une chaine = "HEMA"
+      sTickets est une chaine
+      nQuantite est un entier
+      rNegatif est un reel
+      sNumLigne est une chaine
+      sRemise est une chaine
+      sCabClient est une chaine
+      sPays est une chaine
+      sTypeFidelite est une chaine
+      sEan est une chaine
+      
+      ReqMag est une source de données
+      ReqEAN est une source de données
+      
+      //Exemple d'Extraction de chaine de caratère
+      //Fonction Extraichaine ( LACHAINE,POSITION,SEPARATEUR)
+      
+      sCodeMag = ExtraitChaîne(ContenueLigne,1,Separateur)
+      sCodeMag = val(sCodeMag)
+      
+      //Requete SQL pour recupérer le code magasin Colombus
+      //CHANGER CENTRAL PAR LE NOM DE LA CENTRALE
+      
+      SI  HExécuteRequêteSQL(ReqMag,"SELECT * FROM Magasins WHERE [code_client]='"+sCodeMag+"' AND [Centrale]='Hema'") = Vrai ALORS
+      	HLitPremier(ReqMag)
+      	SI  ReqMag.code_mag_colombus <> "" ALORS
+      		sCodeMag = ReqMag.code_mag_colombus
+      	FIN
+      	
+      FIN
+      
+      //Insertion des données dans la base 
+      
+      //EXEMPLE :Insertion dans la Colonne CODE_MAG dans la base INTEGRATION_TMP de la variable sCodeMag
+      Integration_tmp.code_mag = sCodeMag
+      sDateVente = ExtraitChaîne(ContenueLigne,2,Separateur)
+      sDateVente = Droite(sDateVente,2)+"/"+Milieu(sDateVente,5,2)+"/"+Gauche(sDateVente,4)
+      Integration_tmp.date_vente = sDateVente
+      
+      sCabClient = ExtraitChaîne(ContenueLigne,3,Separateur)
+      
+      HExécuteRequêteSQL(ReqEAN,"SELECT Ean_Rand FROM Reférence_Hema WHERE Ref_Hema_Number = '"+sCabClient+"'")
+      HLitPremier(ReqEAN)
+      SI PAS HEnDehors(ReqEAN) ALORS
+      	sEan =  ReqEAN.Ean_Rand
+      FIN
+      Integration_tmp.cab_rand = ReqEAN.Ean_Rand
+      
+      nQuantite = Val(ExtraitChaîne(ContenueLigne,4,Separateur))
+      
+      Si Contient(ExtraitChaîne(ContenueLigne,4,Separateur),"-") ALORS
+      	
+      	rNegatif = (-1) * nQuantite
+      	Integration_tmp.quantite = rNegatif
+      	
+      SINON
+      	Integration_tmp.quantite = nQuantite
+      FIN
+      
+      Integration_tmp.cab_client = sCabClient
+      Integration_tmp.central = "Hema"
+      sClef = sClef + sCodeMag  + Remplace(sDateVente,"/","") + sEan
+      Integration_tmp.clef = sClef
+      
+      SI nQuantite <> 0 ALORS
+      	Integration_tmp.pvp = Val(ExtraitChaîne(ContenueLigne,5,Separateur))/nQuantite
+      	Hajoute(Integration_tmp)
+      	
+      FIN
+     type : 458752
+   -
+     name : Traitement_Bulk
+     procedure_id : 1519267728031390763
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // Traitement_Hebdo ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // <Indiquez ici un exemple d'utilisation>
+      //
+      procédure Traitement_Bulk(sFichier)
+      
+      sNomFichier	est une chaîne
+      Req_del		est une Source de Données
+      sdReq_lit		est une Source de Données
+      
+      sNomFichier	= fExtraitChemin(sFichier,fFichier)
+      
+      sNomFichier	= "D:\DEX-INATOR_partage\Hema\"+sNomFichier+".csv"
+      
+      HExécuteRequêteSQL(Req_del,"DELETE FROM Bulk_Hema")
+      
+      HExécuteRequête(REQ_BULK_INSERT,BDDEXT,hRequêteSansCorrection,"'"+sNomFichier+"'") 
+      
+      HExécuteRequête(REQ_Vte,BDDEXT,hRequêteSansCorrection)
+      
+      HExécuteRequête(REQ_Retour_Vte,BDDEXT,hRequêteSansCorrection)
+      
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAAAspXRQsX4kpYpRJzI8SMGEUfXYJhQeqig0H9mPZLI9hoPnkeFEnSQ8t7JVd8VUY9eLyST/2DyAYB+9rK7lbHVOclfSdkhgAQ9dNjlmStKMpPl9
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x1c766078001326b1
+  internal_properties : CAAAAAgAAACyXVFaObH4lOGSEHJoZf1MD49w+XTw2LScZCP/urkWFwy+HYJdyQ3umA==
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

@@ -1,0 +1,3 @@
+//MO001-002.TXT ANA00001 TO ANA00002
+Reférence_Hema		NFI		nouveau fichier
+Code_Hema		FIC-	Code_Hema	Fichier supprimé Code_Hema

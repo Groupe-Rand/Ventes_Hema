@@ -1,0 +1,6 @@
+//MO000-001.TXT ANA00000 TO ANA00001
+Code_Hema		NFI		nouveau fichier
+Integration_tmp		NFI		nouveau fichier
+Magasins		NFI		nouveau fichier
+Processus		NFI		nouveau fichier
+BDDEXT		CNX+		
