@@ -135,7 +135,7 @@ window :
       	HModifie(Processus)
       	Separateur = SansEspace(Processus.Separateur)
       	//Fonction pour une recuperation Mail
-      	//RecupBoiteMail(sLogin,Motpasse)
+      	RecupBoiteMail(sLogin,Motpasse)
       	
       FIN
       

@@ -105,7 +105,7 @@ window :
       sLogin est une chaine 
       Motpasse est une chaine 
       sAdresseFTP est une chaine 
-      bufSContenueFichier est un buffer
+      sContenueFichier est un buffer
       
       Req_del est une source de données
       
@@ -151,54 +151,121 @@ window :
       		
       		ResCopie = fCopieFichier(sFichier,DossierDestination)
       		fEcritLigne(IDLog,"Copie du fichier  "+fExtraitChemin(sFichier,fFichier)+ " sur "+DossierDestination)
-      		IDFichier = fOuvre(sFichier,foLectureEcriture)
-      		SI IDFichier = -1 ALORS
-      			fEcritLigne(IDLog," Impossible de lire le fichier   "+ fExtraitChemin(sFichier,fFichier)+ "  "+ErreurInfo(errMessage)) 
-      		SINON 
-      			fEcritLigne(IDLog,"Lecture du Fichier "+fExtraitChemin(sFichier,fFichier)+" en cours ....")
-      				
-      				sContenueFichierTMP est une chaine = ""
-      				bufSContenueFichier =  fLitLigne(IDFichier)
-      				LigneLue = UnicodeVersAnsi(bufSContenueFichier)
-      				fFerme(IDFichier)	
-      			
-      				nLigne = 1
-      				
-      				//nResCree est un entier = fCrée("\\rand-edi2\DEX-INATOR_partage\Hema\test.csv")
-      				
-      				POUR TOUT CHAINE sLigneContenue DE LigneLue SEPAREE PAR RC
-      					
-      //					SI nLigne > 1 ALORS
-      //						ExtractionLigne(sLigneContenue)
-      //					FIN
-      //					nLigne++
-      //					
-      						
-      						sContenueFichierTMP = sContenueFichierTMP +  sLigneContenue+ RC
-      						//fEcritLigne(nResCree,sLigneContenue)	
-      					
-      				FIN
-      				
+      //		IDFichier = fOuvre(sFichier,foLectureEcriture)
+      //		SI IDFichier = -1 ALORS
+      //			fEcritLigne(IDLog," Impossible de lire le fichier   "+ fExtraitChemin(sFichier,fFichier)+ "  "+ErreurInfo(errMessage)) 
+      //		SINON 
+      //			fEcritLigne(IDLog,"Lecture du Fichier "+fExtraitChemin(sFichier,fFichier)+" en cours ....")
+      //		
+      //				sContenueFichier =  fLitLigne(IDFichier)
+      //				LigneLue = UnicodeVersAnsi(sContenueFichier)
+      //				nLigne = 1
       //				
-      		fSauveTexte(sFichier,sContenueFichierTMP)
-      		
+      //				nResCree est un entier = fCrée("\\rand-edi2\DEX-INATOR_partage\Hema\test.csv")
+      //				
+      //				POUR TOUT CHAINE sLigneContenue DE LigneLue SEPAREE PAR RC
+      //					
+      ////					SI nLigne > 1 ALORS
+      ////						ExtractionLigne(sLigneContenue)
+      ////					FIN
+      ////					nLigne++
+      ////					
+      //					
+      //						fEcritLigne(nResCree,sLigneContenue)	
+      //					
+      //				FIN
+      //				
+      //				fferme(nResCree)
+      //				
+      //				SI ErreurDétectée ALORS
+      //					Erreur(ErreurInfo())
+      //					SORTIR
+      //				FIN
+      //				SI LigneLue = EOT ALORS SORTIR
+      //				
+      	
       		sNomFichier est une chaine = fExtraitChemin(sFichier,fFichier)
       		
       		Traitement_Bulk(sNomFichier)
       		
       			
-      		fFerme(IDFichier)
-      		fEcritLigne(IDLog,"Fin de lecture du Fichier  "+ fExtraitChemin(sFichier,fFichier))	
-      		//SUPPRIMER LES // POUR LES 2 LIGNE CI DESOUS POUR LA PRODUCTION DU PROGRAMME 
-      		fSupprime(sFichier)
-      		LanceAppli("\\rand-edi2\DEX-INATOR_partage\Genera-innator\Genera-innator.exe",exeActif,exeBloquant)
-      		Temporisation(100,tempoTimer)
-      		FIN
+      			fFerme(IDFichier)
+      			fEcritLigne(IDLog,"Fin de lecture du Fichier  "+ fExtraitChemin(sFichier,fFichier))	
+      			//SUPPRIMER LES // POUR LES 2 LIGNE CI DESOUS POUR LA PRODUCTION DU PROGRAMME 
+      			fSupprime(sFichier)
+      			//LanceAppli("\\rand-edi2\DEX-INATOR_partage\Genera-innator\Genera-innator.exe",exeActif,exeBloquant)
+      			Temporisation(100,tempoTimer)
+      		//FIN
       	FIN
       	
       FIN
       
+      Temporisation(500,tempoTimer)
       
+      
+      fEcritLigne(IDLog,"Lecture du Fichier Hebdo  ")	
+      
+      //
+      //Si HeureVersEntier(HeureSys()) > HeureVersEntier("13000000") ALORS
+      //	
+      //	// SI le fichier à été recupérer chez le serveur du client
+      //	//Parcour du répertoire EDI pour lister les fichiers
+      //	ResListeFichier = fListeFichier( RepFichier+"Hebdo\*.csv",frNonRécursif + frInterruptible)
+      //	SI ResListeFichier = "" ALORS
+      //		fEcritLigne(IDLog,"Pas de fichier dans le repertoire "+RepFichier)
+      //		bPasdeFichier = Vrai
+      //	SINON
+      //		
+      //		//Lecture des fichiers et ajout dans le base temporaires les ventes récupérés
+      //		POUR TOUTE CHAÎNE sFichier DE ResListeFichier SEPAREE PAR RC
+      //			
+      //
+      //			
+      //			fEcritLigne(IDLog,"Copie du fichier  "+fExtraitChemin(sFichier,fFichier)+ " sur "+DossierDestination)
+      //			IDFichier = fOuvre(sFichier,foLectureEcriture)
+      //			SI IDFichier = -1 ALORS
+      //				fEcritLigne(IDLog," Impossible de lire le fichier   "+ fExtraitChemin(sFichier,fFichier)+ "  "+ErreurInfo(errMessage)) 
+      //			SINON 
+      //				fEcritLigne(IDLog,"Lecture du Fichier "+fExtraitChemin(sFichier,fFichier)+" en cours ....")
+      //				
+      //				sContenueFichier	=  fLitLigne(IDFichier)
+      //				LigneLue			= UnicodeVersAnsi(sContenueFichier)
+      //				nLigne				= 1
+      //				
+      //				POUR TOUT CHAÎNE sLigneContenue DE LigneLue SEPAREE PAR RC
+      //					
+      //					SI nLigne > 1 ALORS
+      //						ExtractionLigne(sLigneContenue)
+      //					FIN
+      //					nLigne++
+      //					
+      //				FIN
+      //				
+      //				//				SI ErreurDétectée ALORS
+      //				//					Erreur(ErreurInfo())
+      //				//					SORTIR
+      //				//				FIN
+      //				//				SI LigneLue = EOT ALORS SORTIR
+      //				//				
+      //				
+      //				
+      //				fFerme(IDFichier)
+      //				fEcritLigne(IDLog,"Fin de lecture du Fichier  "+ fExtraitChemin(sFichier,fFichier))	
+      //				//SUPPRIMER LES // POUR LES 2 LIGNE CI DESOUS POUR LA PRODUCTION DU PROGRAMME 
+      //				fSupprime(sFichier)
+      //				LanceAppli("\\rand-edi2\DEX-INATOR_partage\Genera-innator\Genera-innator.exe",exeActif,exeBloquant)
+      //				Temporisation(100,tempoTimer)
+      //			FIN
+      //		FIN
+      //		
+      //	FIN
+      //	// SI le fichier à été recupérer chez le serveur du client
+      //	
+      //	
+      //FIN
+      
+      
+      fEcritLigne(IDLog,"Fin de lecture de(s) fichier(s) Hebdo ")	
       
       fFerme(IDLog)
       
@@ -250,7 +317,7 @@ window :
       				EmailSupprimeMessage(SessionImap)
       				nIndice++
       			SINON 
-      				EmailSauveFichierAttaché(Email.Attache[1],RepFichier+"Hebdo_Hema"+sDatejour+nIndice+".csv")	
+      				EmailSauveFichierAttaché(Email.Attache[1],RepFichier+"Hebdo\Hebdo_Hema"+sDatejour+nIndice+".csv")	
       				EmailSupprimeMessage(SessionImap)
       				nIndice++
       				
@@ -390,6 +457,7 @@ window :
       HExécuteRequêteSQL(Req_del,"DELETE FROM Bulk_Hema")
       
       HExécuteRequête(REQ_BULK_INSERT,BDDEXT,hRequêteSansCorrection,"'"+sNomFichier+"'") 
+      
       
       HExécuteRequête(REQ_Vte,BDDEXT,hRequêteSansCorrection)
       
