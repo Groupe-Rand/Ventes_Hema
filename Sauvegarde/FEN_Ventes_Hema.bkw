@@ -135,7 +135,7 @@ window :
       	HModifie(Processus)
       	Separateur = SansEspace(Processus.Separateur)
       	//Fonction pour une recuperation Mail
-      	RecupBoiteMail(sLogin,Motpasse)
+      	//RecupBoiteMail(sLogin,Motpasse)
       	
       FIN
       
@@ -191,6 +191,9 @@ window :
       		fEcritLigne(IDLog,"Fin de lecture du Fichier  "+ fExtraitChemin(sFichier,fFichier))	
       		//SUPPRIMER LES // POUR LES 2 LIGNE CI DESOUS POUR LA PRODUCTION DU PROGRAMME 
       		fSupprime(sFichier)
+      		// -- TEST Integration dans HANA --
+      		LanceAppli("\\rand-edi2\DEX-INATOR_partage\Genera-innator\Hana\Genera-Hana-Innator.exe",exeActif,exeBloquant)
+      		// --
       		LanceAppli("\\rand-edi2\DEX-INATOR_partage\Genera-innator\Genera-innator.exe",exeActif,exeBloquant)
       		Temporisation(100,tempoTimer)
       		FIN
